@@ -60,6 +60,7 @@
             this.btnAdd1.TabIndex = 0;
             this.btnAdd1.Text = "1";
             this.btnAdd1.UseVisualStyleBackColor = true;
+            this.btnAdd1.Click += new System.EventHandler(this.btnAdd1_Click);
             // 
             // btnAdd2
             // 
@@ -69,6 +70,7 @@
             this.btnAdd2.TabIndex = 1;
             this.btnAdd2.Text = "2";
             this.btnAdd2.UseVisualStyleBackColor = true;
+            this.btnAdd2.Click += new System.EventHandler(this.btnAdd2_Click);
             // 
             // btnAdd3
             // 
@@ -78,6 +80,7 @@
             this.btnAdd3.TabIndex = 2;
             this.btnAdd3.Text = "3";
             this.btnAdd3.UseVisualStyleBackColor = true;
+            this.btnAdd3.Click += new System.EventHandler(this.btnAdd3_Click);
             // 
             // btnAdd4
             // 
@@ -87,6 +90,7 @@
             this.btnAdd4.TabIndex = 3;
             this.btnAdd4.Text = "4";
             this.btnAdd4.UseVisualStyleBackColor = true;
+            this.btnAdd4.Click += new System.EventHandler(this.btnAdd4_Click);
             // 
             // btnAdd5
             // 
@@ -96,6 +100,7 @@
             this.btnAdd5.TabIndex = 4;
             this.btnAdd5.Text = "5";
             this.btnAdd5.UseVisualStyleBackColor = true;
+            this.btnAdd5.Click += new System.EventHandler(this.btnAdd5_Click);
             // 
             // btnAdd6
             // 
@@ -105,6 +110,7 @@
             this.btnAdd6.TabIndex = 5;
             this.btnAdd6.Text = "6";
             this.btnAdd6.UseVisualStyleBackColor = true;
+            this.btnAdd6.Click += new System.EventHandler(this.btnAdd6_Click);
             // 
             // btnAdd7
             // 
@@ -114,6 +120,7 @@
             this.btnAdd7.TabIndex = 6;
             this.btnAdd7.Text = "7";
             this.btnAdd7.UseVisualStyleBackColor = true;
+            this.btnAdd7.Click += new System.EventHandler(this.btnAdd7_Click);
             // 
             // btnAdd8
             // 
@@ -123,6 +130,7 @@
             this.btnAdd8.TabIndex = 7;
             this.btnAdd8.Text = "8";
             this.btnAdd8.UseVisualStyleBackColor = true;
+            this.btnAdd8.Click += new System.EventHandler(this.btnAdd8_Click);
             // 
             // btnAdd9
             // 
@@ -132,6 +140,7 @@
             this.btnAdd9.TabIndex = 8;
             this.btnAdd9.Text = "9";
             this.btnAdd9.UseVisualStyleBackColor = true;
+            this.btnAdd9.Click += new System.EventHandler(this.btnAdd9_Click);
             // 
             // btnAdd0
             // 
@@ -141,6 +150,7 @@
             this.btnAdd0.TabIndex = 9;
             this.btnAdd0.Text = "0";
             this.btnAdd0.UseVisualStyleBackColor = true;
+            this.btnAdd0.Click += new System.EventHandler(this.btnAdd0_Click);
             // 
             // btnAddDot
             // 
@@ -150,6 +160,7 @@
             this.btnAddDot.TabIndex = 10;
             this.btnAddDot.Text = ",";
             this.btnAddDot.UseVisualStyleBackColor = true;
+            this.btnAddDot.Click += new System.EventHandler(this.btnAddDot_Click);
             // 
             // btnAddPlus
             // 
@@ -159,6 +170,7 @@
             this.btnAddPlus.TabIndex = 11;
             this.btnAddPlus.Text = "+";
             this.btnAddPlus.UseVisualStyleBackColor = true;
+            this.btnAddPlus.Click += new System.EventHandler(this.btnAddPlus_Click);
             // 
             // btnAddMinus
             // 
@@ -168,6 +180,7 @@
             this.btnAddMinus.TabIndex = 12;
             this.btnAddMinus.Text = "-";
             this.btnAddMinus.UseVisualStyleBackColor = true;
+            this.btnAddMinus.Click += new System.EventHandler(this.btnAddMinus_Click);
             // 
             // btnAddMultiplier
             // 
@@ -177,6 +190,7 @@
             this.btnAddMultiplier.TabIndex = 13;
             this.btnAddMultiplier.Text = "*";
             this.btnAddMultiplier.UseVisualStyleBackColor = true;
+            this.btnAddMultiplier.Click += new System.EventHandler(this.btnAddMultiplier_Click);
             // 
             // btnAddDivision
             // 
@@ -186,6 +200,7 @@
             this.btnAddDivision.TabIndex = 14;
             this.btnAddDivision.Text = "/";
             this.btnAddDivision.UseVisualStyleBackColor = true;
+            this.btnAddDivision.Click += new System.EventHandler(this.btnAddDivision_Click);
             // 
             // btnSqrt
             // 
@@ -213,6 +228,7 @@
             this.btnSolution.TabIndex = 17;
             this.btnSolution.Text = "=";
             this.btnSolution.UseVisualStyleBackColor = true;
+            this.btnSolution.Click += new System.EventHandler(this.btnSolution_Click);
             // 
             // btnClear
             // 
@@ -222,6 +238,7 @@
             this.btnClear.TabIndex = 18;
             this.btnClear.Text = "Clr";
             this.btnClear.UseVisualStyleBackColor = true;
+            this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
             // 
             // btnPlusOrMinus
             // 
@@ -231,6 +248,7 @@
             this.btnPlusOrMinus.TabIndex = 19;
             this.btnPlusOrMinus.Text = "+/-";
             this.btnPlusOrMinus.UseVisualStyleBackColor = true;
+            this.btnPlusOrMinus.Click += new System.EventHandler(this.btnPlusOrMinus_Click);
             // 
             // SolutionList
             // 
@@ -247,12 +265,13 @@
             this.SolutionLine.Name = "SolutionLine";
             this.SolutionLine.Size = new System.Drawing.Size(113, 23);
             this.SolutionLine.TabIndex = 21;
+            this.SolutionLine.Text = "0";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(403, 306);
+            this.ClientSize = new System.Drawing.Size(424, 225);
             this.Controls.Add(this.SolutionLine);
             this.Controls.Add(this.SolutionList);
             this.Controls.Add(this.btnPlusOrMinus);
