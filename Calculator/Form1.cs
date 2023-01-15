@@ -4,8 +4,8 @@ namespace Calculator
 {
     public partial class Form1 : Form
     {
-        public static double firstDigit = 0;
-        public static double secondDigit = 0;
+        public static string firstDigit = "";
+        public static string secondDigit = "";
         public static double resalt = 0;
         public static char operation = '\0';
 
@@ -34,6 +34,26 @@ namespace Calculator
                 operation = CheckedSign;
                 SolutionLine.Text += CheckedSign;
             }
+        }
+
+        private double SolveSimpleEqation(string xDigit, string yDigit, char sign)
+        {
+            double solvedEqation = 0;
+            if (sign == '+')
+            {
+                solvedEqation = Double.Parse(xDigit) + Double.Parse(yDigit);
+            } else if (sign == '-')
+            {
+                solvedEqation = Double.Parse(xDigit) - Double.Parse(yDigit);
+            } else if (sign == '*')
+            {
+                solvedEqation = Double.Parse(xDigit) * Double.Parse(yDigit);
+            } else if (sign == '/')
+            {
+                solvedEqation = Double.Parse(xDigit) / Double.Parse(yDigit);
+            }
+
+            return solvedEqation;
         }
 
         private void btnAdd1_Click(object sender, EventArgs e)
@@ -152,15 +172,29 @@ namespace Calculator
         {
             if (SolutionLine.Text.Equals("0"))
             {
-
-            } else if (!operation.Equals('\0') &&
-                       !SolutionLine.Text.Substring(SolutionLine.Text.IndexOf(operation)).Contains(""))//fix here
+                
+            } else if (operation.Equals('\0'))
             {
-                firstDigit = Double.Parse(SolutionLine.Text.Substring(SolutionLine.Text.LastIndexOf(operation)));
-                secondDigit = Double.Parse(SolutionLine.Text.Substring(SolutionLine.Text.IndexOf(operation)));
-                resalt = firstDigit + secondDigit;
-                SolutionList.Text = resalt.ToString();
+                
             }
+            else if (SolutionLine.Text == SolutionLine.Text.Remove(SolutionLine.Text.IndexOf(operation) + 1))
+            {
+                
+            }
+            else
+            {
+                firstDigit = SolutionLine.Text.Remove(SolutionLine.Text.IndexOf(operation));
+                secondDigit = SolutionLine.Text.Substring(SolutionLine.Text.LastIndexOf(operation)+1);
+                firstDigit = firstDigit.TrimEnd(',');
+                secondDigit = secondDigit.TrimEnd(',');
+                resalt = Math.Round(SolveSimpleEqation(firstDigit, secondDigit, operation),3);
+                SolutionList.Text = firstDigit + " " + operation + " " + secondDigit + "=" + resalt.ToString();
+            }
+        }
+
+        private void btnPercent_Click(object sender, EventArgs e)
+        {
+            SolutionList.Text = SolutionLine.Text.Remove(SolutionLine.Text.IndexOf(operation) + 1);
         }
     }
 

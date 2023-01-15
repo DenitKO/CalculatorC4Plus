@@ -219,6 +219,7 @@
             this.btnPercent.TabIndex = 16;
             this.btnPercent.Text = "%";
             this.btnPercent.UseVisualStyleBackColor = true;
+            this.btnPercent.Click += new System.EventHandler(this.btnPercent_Click);
             // 
             // btnSolution
             // 
@@ -253,7 +254,7 @@
             // SolutionList
             // 
             this.SolutionList.AutoSize = true;
-            this.SolutionList.Location = new System.Drawing.Point(263, 17);
+            this.SolutionList.Location = new System.Drawing.Point(242, 17);
             this.SolutionList.Name = "SolutionList";
             this.SolutionList.Size = new System.Drawing.Size(40, 15);
             this.SolutionList.TabIndex = 20;
